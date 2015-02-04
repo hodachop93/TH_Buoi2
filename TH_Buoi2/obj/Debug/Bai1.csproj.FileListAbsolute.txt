@@ -1,0 +1,9 @@
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\bin\Debug\TH_Buoi2.exe.config
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\bin\Debug\TH_Buoi2.exe
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\bin\Debug\TH_Buoi2.pdb
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\obj\Debug\Bai1.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\obj\Debug\TH_Buoi2.Form1.resources
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\obj\Debug\TH_Buoi2.Properties.Resources.resources
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\obj\Debug\Bai1.csproj.GenerateResource.Cache
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\obj\Debug\TH_Buoi2.exe
+D:\Visual Studio Projects\TH_Buoi2\TH_Buoi2\obj\Debug\TH_Buoi2.pdb
