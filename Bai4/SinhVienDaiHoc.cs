@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Bai4
 {
-    public class SinhVienDaiHoc : SinhVien
+    class SinhVienDaiHoc : SinhVien
     {
         private string chuyenNganh;
         public string ChuyenNganh

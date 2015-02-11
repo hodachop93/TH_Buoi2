@@ -71,12 +71,13 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(756, 463);
+            this.btnThoat.Location = new System.Drawing.Point(754, 463);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 0;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // groupBox1
             // 
@@ -172,6 +173,7 @@
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -181,6 +183,7 @@
             this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnReset
             // 
@@ -273,6 +276,7 @@
             this.radCaoDang.TabStop = true;
             this.radCaoDang.Text = "Cao Đẳng";
             this.radCaoDang.UseVisualStyleBackColor = true;
+            this.radCaoDang.CheckedChanged += new System.EventHandler(this.radio_CheckChanged);
             // 
             // radBang2
             // 
@@ -284,6 +288,7 @@
             this.radBang2.TabStop = true;
             this.radBang2.Text = "Bằng Hai";
             this.radBang2.UseVisualStyleBackColor = true;
+            this.radBang2.CheckedChanged += new System.EventHandler(this.radio_CheckChanged);
             // 
             // radDaiHoc
             // 
@@ -295,6 +300,7 @@
             this.radDaiHoc.TabStop = true;
             this.radDaiHoc.Text = "Đại Học";
             this.radDaiHoc.UseVisualStyleBackColor = true;
+            this.radDaiHoc.CheckedChanged += new System.EventHandler(this.radio_CheckChanged);
             // 
             // label2
             // 
@@ -352,7 +358,7 @@
             // 
             // dtpNS
             // 
-            this.dtpNS.Location = new System.Drawing.Point(110, 93);
+            this.dtpNS.Location = new System.Drawing.Point(116, 93);
             this.dtpNS.Name = "dtpNS";
             this.dtpNS.Size = new System.Drawing.Size(200, 20);
             this.dtpNS.TabIndex = 14;

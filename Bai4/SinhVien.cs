@@ -79,7 +79,10 @@ namespace Bai4
                 nienKhoa = value;
             }
         }
-        public abstract virtual string LoaiHinh();
+        public virtual string LoaiHinh()
+        {
+            return "Sinh vien";
+        }
         public SinhVien()
         {
 

@@ -5,13 +5,17 @@ using System.Text;
 
 namespace Bai4
 {
-    public class SinhVienCaoDang : SinhVien
+    class SinhVienCaoDang : SinhVien
     {
         public SinhVienCaoDang() { }
-        public SinhVienCaoDang(string _diaChi, string _dienThoai, string _hoTen, int _MSSV, DateTime _ngaySinh, string _nienKhoa, string _chuyenNganh)
+        public SinhVienCaoDang(string _diaChi, string _dienThoai, string _hoTen, int _MSSV, DateTime _ngaySinh, string _nienKhoa)
             : base(_diaChi, _dienThoai, _hoTen, _MSSV, _ngaySinh, _nienKhoa)
         {
 
+        }
+        public override string LoaiHinh()
+        {
+            return "Cao dang";
         }
     }
 }
