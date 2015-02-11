@@ -231,7 +231,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitle);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Dental Payment Application";
             ((System.ComponentModel.ISupportInitialize)(this.numFilling)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
