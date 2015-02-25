@@ -193,6 +193,7 @@
             this.btnReset.TabIndex = 6;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // groupBox2
             // 
@@ -215,6 +216,7 @@
             // 
             // cboCN
             // 
+            this.cboCN.Enabled = false;
             this.cboCN.FormattingEnabled = true;
             this.cboCN.Items.AddRange(new object[] {
             "CNPM",
@@ -227,6 +229,7 @@
             // 
             // txtCty
             // 
+            this.txtCty.Enabled = false;
             this.txtCty.Location = new System.Drawing.Point(325, 60);
             this.txtCty.Name = "txtCty";
             this.txtCty.Size = new System.Drawing.Size(208, 20);
@@ -234,6 +237,7 @@
             // 
             // txtBang1
             // 
+            this.txtBang1.Enabled = false;
             this.txtBang1.Location = new System.Drawing.Point(325, 33);
             this.txtBang1.Name = "txtBang1";
             this.txtBang1.Size = new System.Drawing.Size(208, 20);
