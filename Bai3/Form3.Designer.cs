@@ -275,6 +275,7 @@
             this.btnPMBo.Text = "Burger Phô mai Bò";
             this.btnPMBo.UseVisualStyleBackColor = true;
             this.btnPMBo.ClientSizeChanged += new System.EventHandler(this.btn_Click);
+            this.btnPMBo.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnXoa
             // 
@@ -317,6 +318,7 @@
             this.btnOrder.TabIndex = 23;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // dataGridView
             // 

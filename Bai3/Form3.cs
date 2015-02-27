@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Bai3
 {
@@ -33,13 +34,13 @@ namespace Bai3
         {
             Button btn = (Button)sender;
             
-            List<string> listFood = new List<string>();
-            string[] s = {"btnPMBo","btnPMGa","btnPMTom","btnPMCa","btnTomVienCola","btnGaVienCola","btnGaRanPhan","btnComGaTender","btnPepsi",
-                         "btn7Up","btnCafe","btnCam","btnLipton","btnCoca","btnKhoaiTayChien"};
-            listFood.AddRange(s);
+            //List<string> listFood = new List<string>();
+            //string[] s = {"btnPMBo","btnPMGa","btnPMTom","btnPMCa","btnTomVienCola","btnGaVienCola","btnGaRanPhan","btnComGaTender","btnPepsi",
+            //             "btn7Up","btnCafe","btnCam","btnLipton","btnCoca","btnKhoaiTayChien"};
+            //listFood.AddRange(s);
             if (!cbBoxBan.Text.Equals(""))
             {
-                if (listFood.Contains(btn.Name))
+                if (true)
                 {
                     int indexOfBan = getIndexOfBan(cbBoxBan.Text);
                     insertFoodInTable(btn.Text, indexOfBan);
@@ -70,7 +71,7 @@ namespace Bai3
                     break;
 
             }
-
+            
             return i;
         }
 
@@ -106,14 +107,61 @@ namespace Bai3
 
         private void cbBoxBan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataGridView.DataSource = listBan[getIndexOfBan(cbBoxBan.Text)];
-
+            DataTable temp = null;
+            for (int i = 0; i < listBan.Count; i++)
+            {
+                temp=listBan[i];
+                if (i != getIndexOfBan(cbBoxBan.Text))
+                    temp.Clear(); 
+            }
+            temp = listBan[getIndexOfBan(cbBoxBan.Text)];
+            
+            string path = @".\" + cbBoxBan.Text + ".txt";
+            if (File.Exists(path))
+            {
+                StreamReader sr = new StreamReader(path);
+                string line, food, quality;
+                int i = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    food = line.Substring(0, line.IndexOf(","));
+                    quality = line.Substring(line.IndexOf(",") + 1);
+                    DataRow row = temp.NewRow();
+                    row[0] = food;
+                    row[1] = quality;
+                    temp.Rows.Add(row);
+                    i++;
+                }
+                sr.Close();
+            }
+            dataGridView.DataSource = temp;
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count >= 0)
                 dataGridView.Rows.RemoveAt(dataGridView.SelectedRows[0].Index);
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            string path = @".\" + cbBoxBan.Text + ".txt";
+            StreamWriter sw = null;
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+            sw = File.CreateText(path);
+            DataTable temp = listBan[getIndexOfBan(cbBoxBan.Text)];
+            string xau="";
+            for (int i = 0; i < temp.Rows.Count; i++)
+            {
+                xau += temp.Rows[i][0] + "," + temp.Rows[i][1];
+                sw.WriteLine(xau);
+                xau = "";
+            }
+            sw.Close();
         }
         
     }

@@ -62,19 +62,24 @@ namespace Bai2
                 lbAccessLog.Items.Add(xau);
 
                 //Ghi file log
-                string path = @"D:\Visual Studio Projects\TH_Buoi2\Bai2\logfile.txt";
+                string path = @".\logfile.txt";
+                StreamWriter sw = null;
                 if (!File.Exists(path))
                 {
                     // tao ra 1 file de viet
-                    StreamWriter sw = File.CreateText(path);
+                    sw = File.CreateText(path);
                 }
-                using (StreamWriter sw = File.AppendText(path))
+                else
                 {
-                    if (!name.Equals("Restricted Access"))
-                    {
-                        sw.WriteLine(xau);
-                    }
-                }	
+                    sw = File.AppendText(path);
+                    
+                }
+
+                if (!name.Equals("Restricted Access"))
+                {
+                    sw.WriteLine(xau);
+                }
+                sw.Close();
 
                 
                 txtSecurityCode.Text = "";
