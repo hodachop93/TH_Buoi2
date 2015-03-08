@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//Toi la ho dac hop
+
 namespace TH_Buoi2
 {
     static class Bai1
