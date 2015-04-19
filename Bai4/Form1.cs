@@ -51,6 +51,7 @@ namespace Bai4
                         this.studentList.Add(sv);
 
                     }
+                    reader.Dispose();
                     UpdateList();
 
                 }
@@ -60,7 +61,7 @@ namespace Bai4
                 }
                 finally
                 {
-                    connection.Close(); //Dong ket noi
+                    
                     connection.Dispose(); //Giai phong tai nguyen
                 }
             }
